@@ -37,6 +37,8 @@
     --primary-secondary-gradient: linear-gradient(90deg, var(--primary-accent-color) 32%, var(--secondary-accent-color) 60%);
     --primary-gradient: linear-gradient(90deg, var(--primary-accent-color) 32%, #6838c7 60%);
     --secondary-gradient: linear-gradient(90deg, var(--secondary-accent-color) 32%, #018ca8 60%);
+
+    --navbar-height: 5rem;
 }
 
 [data-theme="light"] {
@@ -71,6 +73,7 @@ body {
 h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
+    color: var(--primary-text-color);
 }
 
 h1, h2, h3, h4 {
@@ -87,6 +90,7 @@ a {
 }
 
 button {
+    font-family: "Inter", sans-serif;
     border: none;
     background: none;
     padding: 0;
@@ -102,6 +106,10 @@ button {
 
 .text-color {
     color: var(--primary-text-color);
+}
+
+.secondary-text-color {
+    color: var(--primary-fg-color)
 }
 
 .content-container {

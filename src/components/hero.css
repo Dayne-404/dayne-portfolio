@@ -1,11 +1,20 @@
+@font-face {
+    font-family: 'hero-name-font';
+    src: './fonts/GTWalsheimProMedium.OTF'
+}
+
 .hero {
-    height: 100vh;
-    padding-top: 25vh;
+    min-height: calc(100vh - var(--navbar-height) - 6rem);
+    display: flex;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .hero-name {
     font-size: 4rem;
     line-height: 4.5rem;
+    font-family: "hero-name-font", sans-serif;
 }
 
 .hero-text {
@@ -29,8 +38,25 @@
     margin: auto;
 }
 
+.hero-buttons button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+
+    border-width: 2px;
+    border-style: solid;
+    border-image: var(--primary-gradient) 1;
+}
+
+.hero-buttons {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .hero-bio {
-    margin: 1.125rem 0;
+    margin: 1.125rem 0 2rem;
 }
 
 .hero-name {
