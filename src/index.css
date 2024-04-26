@@ -15,7 +15,7 @@
   
     color-scheme: light dark;
     color: #F0F0F0;
-    background: #111;
+    background: #000;
   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -43,6 +43,11 @@ button {
     border: none;
     padding: 0;
     margin: 0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
 }
 
 p, a, h2 {
@@ -68,14 +73,20 @@ p, a, h2 {
     -webkit-text-fill-color: transparent;
 }
   
-.content-container, .nav-link-container {
+.content-container {
     margin: 0 auto;
     max-width: 67.5rem;
     width: 100%;
 }
 
 header {
-    padding: 8.5rem 0 4.5rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-text {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -85,6 +96,35 @@ header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+}
+
+.social-button {
+    width: 12.5rem;
+    height: 3.4rem;
+    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+
+    margin-right: 1rem;
+
+    border-radius: 0.5rem;
+    border: double 2px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.border-purple-gradient {
+    background-image: 
+        linear-gradient(#111, #111),
+        linear-gradient(to right, #9358F7, #10D7E2);
+}
+
+.border-blue-gradient {
+    background-image: 
+        linear-gradient(#111, #111),
+        linear-gradient(to right, #10D7E2, #DD5789);
 }
 
 /* Navbar */
@@ -103,6 +143,7 @@ nav svg {
 
 .anchor-container {
     display: flex;
+    align-items: center;
     gap: 1.88rem;
 }
 
@@ -113,23 +154,51 @@ nav svg {
 
 /* About */
 
-.about-container {
-    padding: 4.5rem 0;
+.experience-container {
+    display: flex;
+    gap: 5.5rem
 }
 
-.about-container button {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: #F0F0F0;
-    text-align: justify;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 300;
+.experience-sidebar {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
 
+.experience-sidebar button {
+    text-align: left;
     width: 10rem;
-    height: 2.6875rem;
-    border-radius: 0.25rem;
+    height: 3.5rem;
+    padding-left: 2.25rem;
+    border-left: 0.125rem solid #1F1E1E;
+    cursor: pointer;
+}
+
+.experience-content {
+    width: 100%;
+}
+
+#experience-sidebar-selected, .experience-sidebar button:hover {
     background: #1F1E1E;
-    text-align: center;
+    border-left: 0.125rem solid #FFF;
+}
+
+#experience-sidebar-selected {
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .about-container {
+    padding: 4.5rem 0;
 }
 
 .about-container-buttons {
@@ -142,10 +211,30 @@ nav svg {
     padding: 4.5rem 0;
     height: 15rem;
     border-bottom: 0.0375rem solid #C6C6C6;
-}
+} */
 
 /* Helper */
 
 .small-bottom-margin {
     margin-bottom: 1.25rem;
+}
+
+.auto-bottom-margin {
+    margin-bottom: auto;
+}
+
+.black-background {
+    background: #111;
+}
+
+.bottom-border {
+    border-bottom: 0.0375rem solid #C6C6C6;
+}
+
+.content-padding {
+    padding: 8.5rem 0 8.5rem;
+}
+
+.small-content-padding {
+    padding: 6rem 0;
 }
