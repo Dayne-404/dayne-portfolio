@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Code+Pro:ital,wght@0,500;1,500&display=swap');
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+.navbar a {
+    font-family: "Source Code Pro", monospace;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    word-spacing: -0.4rem;
+}
+
+/* This is the big navbar */
+/* .navbar-page-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} */
+
+.navbar-page-links {
+    top: 6rem;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    position: absolute;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navbar-page-links a {
+    border-bottom: 0.1rem solid lightgray;
+}
+
+.navbar-hamburger-button {
+    font-size: 1.5rem;
+}
+
+.navbar-home-button {
+    font-size: 1.5rem;
+    margin-top: -0.2501rem;
+}

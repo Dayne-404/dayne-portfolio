@@ -1,0 +1,42 @@
+.hero {
+    height: 100vh;
+    padding-top: 25vh;
+}
+
+.hero-name {
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+}
+
+.hero-img {
+    width: 16rem;
+    height: 16rem;
+    
+    box-sizing: border-box;
+    background-color: var(--primary-accent-color);
+    border-radius: 100%;
+    border: 0.25rem solid var(--primary-accent-color);
+    box-shadow: 0 0 10px var(--primary-accent-color);
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+    margin: auto;
+}
+
+.hero-bio {
+    margin: 1.125rem 0;
+}
+
+.hero-name {
+    margin: 0.25rem 0 1.125rem;
+}
+
+.hero-greeting {
+    margin: 1.125rem 0 0.25rem;
+}
