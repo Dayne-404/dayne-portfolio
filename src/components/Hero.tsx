@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../assets/sineCurve.svg?react';
 
 import './hero.css';
 import profilePicture from '../assets/pfp.jpg';
@@ -8,6 +9,7 @@ import profilePicture from '../assets/pfp.jpg';
 function Hero() {
 	return (
 		<div className="hero content-container">
+			<span className='hero-background-svg'><Logo /></span>
 			<div className="hero-content">
 				<div className="hero-img">
 					<img src={profilePicture} alt="image of Dayne" />

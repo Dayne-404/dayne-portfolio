@@ -1,0 +1,23 @@
+.about {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about-img {
+    height: 20rem;
+    background-color: red;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text p {
+    margin: 1rem 0;
+}
+
+.technologies {
+    text-align: center;
+}
