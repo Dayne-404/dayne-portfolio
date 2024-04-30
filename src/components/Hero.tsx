@@ -3,7 +3,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../assets/sineCurve.svg?react';
 
-import './hero.css';
+import '../styles/hero.css';
 import profilePicture from '../assets/pfp.jpg';
 
 function Hero() {

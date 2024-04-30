@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import './navbar.css';
+import '../styles/navbar.css';
 import { useState } from 'react';
 
 function Navbar() {

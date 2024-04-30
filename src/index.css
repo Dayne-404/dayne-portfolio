@@ -111,6 +111,10 @@ button {
     color: var(--primary-text-color);
 }
 
+.accent-text {
+    color: var(--primary-accent-color);
+}
+
 .secondary-text-color {
     color: var(--primary-fg-color)
 }
@@ -137,9 +141,11 @@ button {
 }
 
 .content-seperator svg {
-    width: 70%;
+    /* width: 70%;
     max-width: 90%;
-    min-width: 9rem;
+    min-width: 9rem; */
+    width: 90%;
+    max-width: 15rem;
     opacity: 0.4;
     display: flex;
 }
@@ -152,6 +158,17 @@ button {
     color: var(--secondary-text-color);
     opacity: 0.7;
     font-size: 0.8rem;
+}
+
+.icon {
+    background-color: var(--primary-fg-color);
+    border: 0.5px solid lightgray;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
 }
 
 .small-bottom-margin {
