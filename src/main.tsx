@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <div className='portfolio dark-mode' data-theme="dark">
+    <div id='portfolio' className='portfolio' data-theme="dark">
       <Navbar />
       <Hero />
       <About />

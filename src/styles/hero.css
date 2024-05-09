@@ -14,7 +14,7 @@
 
 .hero {
     height: calc(100vh - var(--navbar-height) - 6rem);
-    min-height: 10rem;
+    min-height: 40rem;
     display: flex;
     align-items: center;
     padding-top: 3rem;

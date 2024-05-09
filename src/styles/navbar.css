@@ -14,13 +14,6 @@
     word-spacing: -0.4rem;
 }
 
-/* This is the big navbar */
-/* .navbar-page-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-} */
-
 .navbar-page-links {
     top: 5rem;
     right: auto;
