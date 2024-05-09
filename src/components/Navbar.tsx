@@ -28,9 +28,9 @@ function Navbar() {
             <FontAwesomeIcon icon={menuButton} className='text-color'/>
         </button>
         <div className={'navbar-page-links ' + menuClass}>
-            <a href='#'><span className='text-purple-gradient'>01.</span> ABOUT</a>
-            <a href='#'><span className='text-purple-gradient'>02.</span> PROJECTS</a>
-            <a href='#'><span className='text-purple-gradient'>03.</span> CONTACT</a>
+            <a href='#about' onClick={toggleHamburger}><span className='text-purple-gradient'>01.</span> ABOUT</a>
+            <a href='#projects' onClick={toggleHamburger}><span className='text-purple-gradient'>02.</span> PROJECTS</a>
+            <a href='#contact' onClick={toggleHamburger}><span className='text-purple-gradient'>03.</span> CONTACT</a>
         </div>
     </div>
   )

@@ -1,0 +1,51 @@
+.contact {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+label, input, textarea  {
+    display: block;
+}
+
+input, textarea {
+    margin: 0.2rem 0 1rem 0;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-fg-color);
+    
+    font-size: 1rem;
+    font-weight: 300;
+    background: var(--input-bg-color);
+}
+
+label {
+    color: var(--primary-text-color);
+    font-weight: 300;
+}
+
+input {
+    height: 2.5rem;
+}
+
+input:focus, textarea:focus {
+    outline: var(--primary-accent-color) auto 5px;
+}
+
+.submit-btn {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+textarea {
+    resize: none;
+    padding: 0.9rem 1rem 1rem 1rem;
+    height: 9rem;
+    overflow: scroll;
+}

@@ -46,6 +46,8 @@
     --primary-text-color: #313659;
     --secondary-text-color: #434343;
     --primary-fg-color: #eae5e5;
+    --input-bg-color: #ede8e4;
+    --icon-color: #000;
 }
 
 [data-theme="dark"] {
@@ -53,13 +55,15 @@
     --primary-text-color: #e8eae9;
     --secondary-text-color: #434343;
     --primary-fg-color: #2f324d;
+    --input-bg-color: #161830;
+    --icon-color: #fff;
 }
 
 .portfolio {
     background: var(--primary-bg-color);
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
 
@@ -67,6 +71,15 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    scroll-behavior: smooth;
+}
+
+textarea, input {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-text-color);
 }
 
 h1, h2, h3, h4, p {
@@ -161,6 +174,7 @@ button {
 }
 
 .icon {
+    color: var(--icon-color);
     background-color: var(--primary-fg-color);
     border: 0.5px solid lightgray;
     display: inline-flex;

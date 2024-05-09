@@ -1,16 +1,13 @@
 import Technologies from './Technologies';
 import aboutImg from '../assets/stare.jpg';
-import Line from '../assets/horizontalLine.svg?react';
+import SectionHeader from './SectionHeader';
 import '../styles/about.css';
 
 function About() {
 	return (
 		<>
-			<div className="about content-container">
-				<div className='content-header-container'>
-					<h2 className="code-font content-header"><span className="text-purple-gradient">01.</span>ABOUT</h2>
-					<div className='content-seperator'><Line /></div>
-				</div>
+			<div id='about' className="about content-container">
+				<SectionHeader number='01.' title='ABOUT' />
 				<div className="about-content">
 					<div className="about-img">
 						<img src={aboutImg} alt='Dayne doing something he likes' />

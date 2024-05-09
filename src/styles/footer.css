@@ -1,0 +1,18 @@
+.footer {
+    background: var(--primary-fg-color);
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0.2rem;
+}
+
+.footer a {
+    font-size: 2rem;
+    color: var(--icon-color);
+    margin: 0.5rem;
+}

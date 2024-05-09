@@ -56,3 +56,10 @@
     gap: 0.5rem 1rem;
     padding-left: 0.5rem;
 }
+
+.project-technologies-used li {
+    color: var(--primary-text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
