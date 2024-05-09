@@ -1,9 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 interface ProjectProps {
-    image: string,
-    projectDescription: string,
+    projectImg: string,
+    projectDescription?: string,
+	gitHubLink: string,
+	liveLink: string
 }
 
-function Project() {
+function Project({projectImg, projectDescription, gitHubLink, liveLink} : ProjectProps) {
 	return (
 		<div className="project">
 			<div className="project-img">
@@ -22,6 +27,7 @@ function Project() {
 						functionality to create an immersive and interactive
 						experience
 					</p>
+					<p>{projectDescription}</p>
 				</div>
 				<ul className="project-technologies-used">
 					<li>React</li>
@@ -31,12 +37,10 @@ function Project() {
 					<li>MongoDB</li>
 				</ul>
 				<div className="project-actions">
-					<a className="icon" href="#">
-						{' '}
+					<a className="icon" href={gitHubLink}>
 						<FontAwesomeIcon icon={faGithub} />
 					</a>
-					<a className="icon" href="#">
-						{' '}
+					<a className="icon" href={liveLink}>
 						<FontAwesomeIcon icon={faUpRightFromSquare} />
 					</a>
 				</div>
