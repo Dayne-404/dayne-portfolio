@@ -1,0 +1,65 @@
+.about {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about-img {
+    height: 20rem;
+    background-color: red;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text p {
+    margin: 1rem 0;
+}
+
+/* TECHNOLOGIES STYLING */
+
+.technologies {
+    text-align: center;
+}
+
+.technologies ul {
+    padding: 0;
+    list-style-type: none;
+    color: var(--primary-text-color);
+}
+
+.technologies ul, .technologies h4 {
+    margin: 0.5rem 0;
+}
+
+.technologies ul li {
+    margin: 0.2rem 0;
+}
+
+.technologies-icon {
+    background-color: #6838c75b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+.technologies-card {
+    height: 12rem;
+    background: var(--primary-fg-color);
+    padding: 1rem 0;
+    border-radius: 1rem;
+    width: 45%;
+}
+
+.technologies-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0 3rem 0;
+}

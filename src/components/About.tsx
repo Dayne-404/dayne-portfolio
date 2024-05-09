@@ -1,33 +1,40 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPython, faReact, faJs, faHtml5, faCss3Alt, faGitAlt, faJava, faNodeJs } from '@fortawesome/free-brands-svg-icons'
+import Technologies from './Technologies';
+import aboutImg from '../assets/stare.jpg';
+import Line from '../assets/horizontalLine.svg?react';
+import '../styles/about.css';
 
 function About() {
-    return (
-        <div className="about-container">
-            <h2 className="small-bottom-margin">ABOUT ME</h2>
-            <div className="about-container-buttons">
-                <button>Skills</button>
-                <button>Education</button>
-                <button>Work</button>
-                <button>Hobbies</button>
-                <button>Hobbies</button>
-                <button>Hobbies</button>
-            </div>
-            <div className="about-container-text">
-                <div id="skills-container">
-                    <h2 className="big-text">Experience</h2>
-                    <FontAwesomeIcon icon={faPython} style={{color: "#FFD43B", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faReact} style={{color: "#74C0FC", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faJs} style={{color: "#f7df1e", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faHtml5} style={{color: "#e34c26", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faCss3Alt} style={{color: "#264de4", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faGitAlt} style={{color: "#F1502F", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faJava} style={{color: "#ec2025", width:"3rem", height:"3rem"}}/>
-                    <FontAwesomeIcon icon={faNodeJs} style={{color: "#83ce27", width:"3rem", height:"3rem"}}/>
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<>
+			<div className="about content-container">
+				<div className='content-header-container'>
+					<h2 className="code-font content-header"><span className="text-purple-gradient">01.</span>ABOUT</h2>
+					<div className='content-seperator'><Line /></div>
+				</div>
+				<div className="about-content">
+					<div className="about-img">
+						<img src={aboutImg} alt='Dayne doing something he likes' />
+					</div>
+					<div className="about-text">
+						<p>
+							During my studies as a <b>computer science student.</b> I
+							delved into back-end development and realized my nautral
+							flair for UI/UX design. Motivated by this realization, I
+							began learning front-end evelopment alongside my studies
+						</p>
+						<p>
+							I aim to build upon my current back-end knowledge and
+							combine it with my front-end skills, working towards
+							becoming a full-stack developer. I am committed to
+							explore and experiment with technologies in pursuit of
+							building seamless and engaging user experiences.
+						</p>
+					</div>
+				</div>
+			</div>
+			<Technologies />
+		</>
+	);
 }
 
 export default About;
