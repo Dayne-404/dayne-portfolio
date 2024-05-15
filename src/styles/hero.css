@@ -13,12 +13,12 @@
 }
 
 .hero {
-    height: calc(100vh - var(--navbar-height) - 6rem);
+    height: calc(100vh - 12rem);
     min-height: 40rem;
     display: flex;
     align-items: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: var(--navbar-height);
+    padding-bottom: var(--navbar-height);;
 }
 
 .hero-name {
@@ -94,10 +94,6 @@
     .hero-img {
         width: 25rem;
         height: 25rem;
-    }
-
-    .hero {
-        padding-top: 0;
     }
 
     .hero-greeting, 

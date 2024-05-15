@@ -1,6 +1,6 @@
 .projects {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: var(--navbar-height);
+    padding-bottom: var(--navbar-height);
 }
 
 .project {

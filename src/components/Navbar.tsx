@@ -2,18 +2,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faBars, faXmark, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import '../styles/navbar.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(true);
     const [menuClass, setMenuClass] = useState('hidden');
     const [menuButton, setMenuButton] = useState(faBars);
-    
+    const [navbarHidden, setNavbarHidden] = useState<boolean>(false);
+    const [prevScrollPosition, setPrevScrollPosition] = useState<number>(window.scrollY);
     const [theme, setTheme] = useState({
         type: 'light',
         icon: faSun,
     });
 
+    useEffect(() => {
+        const controlNavbar = () => {
+            if(window.scrollY > prevScrollPosition) {
+                setNavbarHidden(true);
+
+                setMenuOpen(true);
+                setMenuClass('hidden');
+                setMenuButton(faBars);
+            } else {
+                setNavbarHidden(false);
+            }
+            setPrevScrollPosition(window.scrollY);
+        }
+        
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        }
+    
+    }, [prevScrollPosition]);
+    
     const toggleHamburger = () => {
         setMenuOpen(!menuOpen);
 
@@ -46,7 +68,7 @@ function Navbar() {
     }
   
     return (
-    <div className='navbar content-container'>
+    <div className={'navbar content-container ' + ((navbarHidden) ? 'navbar-scroll-up' : 'navbar-scroll-down')}>
         <a href='#' className='navbar-home-button'>&lt;<span className='text-purple-gradient'>Dayne</span> /&gt;</a>
         <button className='navbar-hamburger-button' onClick={toggleHamburger}>
             <FontAwesomeIcon icon={menuButton} className='text-color'/>
