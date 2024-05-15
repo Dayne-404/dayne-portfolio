@@ -76,3 +76,32 @@
 .hero-greeting {
     margin: 1.125rem 0 0.25rem;
 }
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+    .hero-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-content {
+        width: 30rem;
+    }
+
+    .hero-img {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .hero {
+        padding-top: 0;
+    }
+
+    .hero-greeting, 
+    .hero-img {
+        margin: 0;
+    }
+}

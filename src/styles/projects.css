@@ -23,17 +23,20 @@
     font-size: 0.8rem;
     font-weight: bold;
     margin: 1rem 0 0 0;
+    padding-left: 0.5rem;
 }
 
 .project-header {
     font-size: 1.5rem;
+    padding-left: 0.5rem;
 }
 
 .project-description {
     background-color: var(--primary-accent-color);
     border-radius: 0.2rem;
-    padding: 0.6rem 0.5rem;
+    padding: 1rem 0.8rem;
     margin: 1rem 0;
+    box-sizing: border-box;
 }
 
 .project-description p {
@@ -41,11 +44,9 @@
 }
 
 .project-actions {
-    padding-left: 0.5rem;
-}
-
-.project-actions .icon {
-    margin-right: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 0.3rem;
 }
 
 .project-technologies-used {
@@ -62,4 +63,50 @@
     opacity: 0.8;
     font-size: 0.9rem;
     font-weight: 300;
+}
+
+@media screen and (min-width: 769px) {
+    .project-text-content {
+        width: 35rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .project-description {
+        min-height: 22rem;
+        box-shadow: 0px 0px 1rem var(--primary-accent-color);
+    }
+
+    .project-img {
+        width: 40rem;
+        height: 25rem;
+        position: absolute;
+        right: 0;
+    }
+
+    .right-format .project-img, 
+    .right-format .project-text-content {
+        right: auto;
+        left: 0;
+        margin-left: auto;
+    }   
+
+    .right-format .project-feature,
+    .right-format .project-header {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 0.5rem;
+    }
+
+    .right-format .project-technologies-used,
+    .right-format .project-actions {
+        flex-direction: row-reverse;
+        padding-left: 0;
+        padding-right: 0.5rem;
+    }
+
+    .project {
+        padding-top: 4rem;
+        position: relative;
+    }
 }

@@ -10,7 +10,7 @@ function Projects() {
 			<SectionHeader number='02.' title='PROJECTS' />
 			<div className="projects-container">
 				<ProjectCard projectImg={projectImg} projectDescription='Hello' liveLink='#' gitHubLink='#' />
-				<ProjectCard projectImg={projectImg} projectDescription='Hello' liveLink='#' gitHubLink='#' />
+				<ProjectCard projectImg={projectImg} projectDescription='Hello' liveLink='#' gitHubLink='#' rightFormat />
 			</div>
 		</div>
 	);

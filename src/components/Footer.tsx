@@ -8,7 +8,7 @@ import '../styles/footer.css';
 
 function Footer() {
 	return (
-		<div className="footer content-container">
+		<div className="footer">
             <div className='footer-content'>
                 <p>Thank you!</p>
                 <a
