@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSun } from '@fortawesome/free-regular-svg-icons';
-import { faBars, faXmark, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark} from '@fortawesome/free-solid-svg-icons';
 import '../styles/navbar.css';
 import { useEffect, useState } from 'react';
+import Toggle from './Toggle';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(true);
@@ -10,10 +10,8 @@ function Navbar() {
     const [menuButton, setMenuButton] = useState(faBars);
     const [navbarHidden, setNavbarHidden] = useState<boolean>(false);
     const [prevScrollPosition, setPrevScrollPosition] = useState<number>(window.scrollY);
-    const [theme, setTheme] = useState({
-        type: 'light',
-        icon: faSun,
-    });
+    const [notesHidden, setNotesHidden] = useState<boolean>(true);
+    const [theme, setTheme] = useState('light');
 
     useEffect(() => {
         const controlNavbar = () => {
@@ -48,38 +46,39 @@ function Navbar() {
         }
     }
 
+    const toggleNotes = () => {
+        setNotesHidden(!notesHidden);
+        const notesEl = document.getElementById('notes');
+        notesEl?.classList.remove('hidden');
+    }
+
     const toggleTheme = () => {
-        if(theme.type === 'light') {
-            setTheme({
-                type: 'dark',
-                icon: faMoon
-            });
+        if(theme === 'light') {
+            setTheme('dark');
         } else {
-            setTheme({
-                type: 'light',
-                icon: faSun
-            });
+            setTheme('light');
         }
 
         const portfolioElement = document.getElementById('portfolio');
         if(portfolioElement) {
-            portfolioElement.setAttribute('data-theme', theme.type);
+            portfolioElement.setAttribute('data-theme', theme);
         }
+
+        console.log('setting theme to: ' + theme);
     }
   
     return (
     <div className={'navbar content-container ' + ((navbarHidden) ? 'navbar-scroll-up' : 'navbar-scroll-down')}>
         <a href='#' className='navbar-home-button'>&lt;<span className='text-purple-gradient'>Dayne</span> /&gt;</a>
-        <button className='navbar-hamburger-button' onClick={toggleHamburger}>
+        <button className='navbar-button' onClick={toggleHamburger}>
             <FontAwesomeIcon icon={menuButton} className='text-color'/>
         </button>
         <div className={'navbar-page-links ' + menuClass}>
             <a href='#about' onClick={toggleHamburger}><span className='text-purple-gradient'>01.</span> ABOUT</a>
             <a href='#projects' onClick={toggleHamburger}><span className='text-purple-gradient'>02.</span> PROJECTS</a>
             <a href='#contact' onClick={toggleHamburger}><span className='text-purple-gradient'>03.</span> CONTACT</a>
-            <button className='navbar-hamburger-button' onClick={toggleTheme}>
-                <FontAwesomeIcon icon={theme.icon} className='text-color'/>
-            </button>
+            <a href='#notes' onClick={toggleNotes}><span className='text-purple-gradient'>04.</span> NOTES</a>
+            <Toggle handleChange={toggleTheme} isChecked={theme} />
         </div>
     </div>
   )

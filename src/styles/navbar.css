@@ -11,9 +11,7 @@
     height: var(--navbar-height);
     transition: top 0.3s;
     top: 0;
-
     width: calc(100% - 1.5rem );
-    padding: 0 1.5rem;
     background: var(--primary-bg-color);
 }
 
@@ -43,16 +41,15 @@
     width: 100%;
     text-align: center;
     background: var(--primary-fg-color);
-    border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .navbar-page-links a {
     display: block;
     padding: 1rem;
-    border-top: 0.1rem solid lightgray;
+
 }
 
-.navbar-hamburger-button {
+.navbar-button {
     font-size: 1.5rem;
 }
 
@@ -60,3 +57,14 @@
     font-size: 1.5rem;
     margin-top: -0.2501rem;
 }
+
+.notes {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.notes p {
+    margin: 1rem 0;
+}
+
+  
