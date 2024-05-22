@@ -49,17 +49,22 @@
 }
 
 .technologies-card {
-    height: 12rem;
     background: var(--primary-fg-color);
     padding: 1rem 0;
     border-radius: 1rem;
-    width: 11rem;
 }
 
-.technologies-cards-container {
+/* .technologies-cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0 var(--navbar-height) 0;
+} */
+
+.technologies-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 0.5rem;
     padding: 1rem 0 var(--navbar-height) 0;
 }

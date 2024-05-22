@@ -97,7 +97,9 @@ function Contact() {
 	return (
 		<div id="contact" className="contact content-container">
 			<SectionHeader number="03." title="CONTACT" />
-			{content}
+			<div className='content-wrapper'>
+				{content}
+			</div>
 		</div>
 	);
 }
