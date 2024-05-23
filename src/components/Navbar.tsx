@@ -12,16 +12,20 @@ function Navbar() {
     const [prevScrollPosition, setPrevScrollPosition] = useState<number>(window.scrollY);
     const [notesHidden, setNotesHidden] = useState<boolean>(true);
     const [theme, setTheme] = useState('light');
+    const scrollThreshold = 50;
 
     useEffect(() => {
         const controlNavbar = () => {
-            if(window.scrollY > prevScrollPosition) {
+            const currentScrollPosition = window.scrollY;
+            const distanceScrolled = currentScrollPosition - prevScrollPosition;
+            console.log(distanceScrolled);
+            if(currentScrollPosition > prevScrollPosition + scrollThreshold) {
                 setNavbarHidden(true);
 
                 setMenuOpen(true);
                 setMenuClass('hidden');
                 setMenuButton(faBars);
-            } else {
+            } else if(prevScrollPosition > currentScrollPosition + scrollThreshold) {
                 setNavbarHidden(false);
             }
             setPrevScrollPosition(window.scrollY);

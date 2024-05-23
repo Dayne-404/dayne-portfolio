@@ -113,10 +113,6 @@ button, input {
     cursor: pointer;
 }
 
-button:active {
-    transform: translateY(0.2rem);
-}
-
 .text-purple-gradient {
     background: var(--primary-gradient);
     background-clip: text;
