@@ -12,7 +12,7 @@ function Navbar() {
     const [prevScrollPosition, setPrevScrollPosition] = useState<number>(window.scrollY);
     const [notesHidden, setNotesHidden] = useState<boolean>(true);
     const [theme, setTheme] = useState('light');
-    const scrollThreshold = 50;
+    const scrollThreshold = 10;
 
     useEffect(() => {
         const controlNavbar = () => {
