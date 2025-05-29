@@ -4,6 +4,7 @@ import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { keyframes } from "@emotion/react";
 import Reveal from 'react-awesome-reveal'
 interface ProjectProps {
+	projectName: string;
     projectImg: string;
     projectDescription?: string;
 	gitHubLink: string;
@@ -11,7 +12,8 @@ interface ProjectProps {
 	rightFormat?: boolean;
 }
 
-function Project({projectImg, projectDescription, gitHubLink, liveLink, rightFormat} : ProjectProps) {
+function Project({projectName, projectImg, projectDescription, gitHubLink, liveLink, rightFormat} : ProjectProps) {
+	
 	const format = rightFormat ? 'right-format' : '';
 
 	const customAnimation = keyframes `
@@ -33,17 +35,8 @@ function Project({projectImg, projectDescription, gitHubLink, liveLink, rightFor
 				</div>
 				<div className="project-text-content">
 					<p className="project-feature accent-text">Featured Project</p>
-					<h3 className="project-header">Project Name</h3>
+					<h3 className="project-header">{projectName}</h3>
 					<div className="project-description">
-						<p>
-							This application provides a feature-rich communication
-							platform where users can register invite friends, and
-							engage in text chat, video chat, and group video chat.
-							It combines a user friendly interface, Real-time
-							communication technologies, and robust backend
-							functionality to create an immersive and interactive
-							experience
-						</p>
 						<p>{projectDescription}</p>
 					</div>
 					<ul className="project-technologies-used">
