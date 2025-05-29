@@ -7,12 +7,17 @@ interface ProjectProps {
 	projectName: string;
     projectImg: string;
     projectDescription?: string;
+	projectTopics?: string[];
 	gitHubLink: string;
 	liveLink: string;
 	rightFormat?: boolean;
 }
 
-function Project({projectName, projectImg, projectDescription, gitHubLink, liveLink, rightFormat} : ProjectProps) {
+const capitalizeFirstLetter = (string: string): string => {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function Project({projectName, projectImg, projectDescription, projectTopics, gitHubLink, liveLink, rightFormat} : ProjectProps) {
 	
 	const format = rightFormat ? 'right-format' : '';
 
@@ -35,16 +40,14 @@ function Project({projectName, projectImg, projectDescription, gitHubLink, liveL
 				</div>
 				<div className="project-text-content">
 					<p className="project-feature accent-text">Featured Project</p>
-					<h3 className="project-header">{projectName}</h3>
+					<h3 className="project-header">{capitalizeFirstLetter(projectName)}</h3>
 					<div className="project-description">
 						<p>{projectDescription}</p>
 					</div>
 					<ul className="project-technologies-used">
-						<li>React</li>
-						<li>Redux</li>
-						<li>Node.js</li>
-						<li>Express.js</li>
-						<li>MongoDB</li>
+						{projectTopics && projectTopics.map((tag, index) => (
+							<li key={index}>{capitalizeFirstLetter(tag)}</li>
+						))}
 					</ul>
 					<div className="project-actions">
 						<a className="icon" href={gitHubLink}>

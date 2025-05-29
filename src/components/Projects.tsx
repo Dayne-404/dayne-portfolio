@@ -20,24 +20,35 @@ function Projects() {
 	const [projects, setProjects] = useState<GitHubRepo[]>([]);
 
 	const fetchProjects = async () => {
-			try {
-				const response = await fetch('https://api.github.com/users/dayne-404/starred');
-				const data: GitHubRepo[] = await response.json();
-				
-				const selectedProjects = data.map((repo) => {
-					const meta = projectMeta.find(m => m.repo.toLowerCase() === repo.full_name.toLowerCase());
+		try {
+			const response = await fetch('https://api.github.com/users/dayne-404/starred');
+			const data: GitHubRepo[] = await response.json();
+	
+			// Build a map for quick lookup
+			const repoMap = new Map<string, GitHubRepo>();
+			data.forEach(repo => {
+				repoMap.set(repo.full_name.toLowerCase(), repo);
+			});
+	
+			// Build ordered project list based on meta
+			const orderedProjects = projectMeta
+				.map(meta => {
+					const matchingRepo = repoMap.get(meta.repo.toLowerCase());
+					if (!matchingRepo) return null;
+	
 					return {
-						...repo,
-						previewImage: meta?.previewImage || '/default-project.jpg'
-					};
-				});
-				
-				console.log(selectedProjects)
-				setProjects(selectedProjects);
-			} catch (error) {
-				console.error('Error fetching projects:', error);
-			}
-		};
+						...matchingRepo,
+						previewImage: meta.previewImage ?? '/default-project.jpg'
+					} as GitHubRepo;
+				})
+				.filter((project): project is GitHubRepo => project !== null); // filter out nulls
+	
+			setProjects(orderedProjects);
+		} catch (error) {
+			console.error('Error fetching projects:', error);
+		}
+	};
+	
 	
 		useEffect(() => {
 			fetchProjects();
@@ -54,6 +65,7 @@ function Projects() {
 						projectImg={project.previewImage || ''} // optional default or use a local map
 						projectDescription={project.description || 'No description provided'}
 						liveLink={project.homepage || `https://github.com/${project.full_name}`}
+						projectTopics={project.topics?.filter(topic => topic !== 'portfolio-project')}
 						gitHubLink={project.html_url}
 						rightFormat={index % 2 === 1}
 					/>
