@@ -9,30 +9,32 @@ function Technologies() {
             <div className="technologies-cards-container">
                 <div className="technologies-card">
                     <div className="technologies-icon"> <FontAwesomeIcon icon={faLaptop} className="accent-text"/> </div>
-                    <h4>FRONT END</h4>
+                    <h4>LANGUAGES</h4>
                     <ul>
+                        <li>Python</li>
+                        <li>C/C++/C#</li>
+                        <li>Java</li>
+                        <li>Javascript</li>
+                        <li>Typescript</li>
                         <li>HTML5</li>
                         <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
                     </ul>
                 </div>
                 <div className="technologies-card">
                 <div className="technologies-icon"> <FontAwesomeIcon icon={faCode} className="accent-text"/> </div>
                     <h4>BACK END</h4>
                     <ul>
-                        <li>C#</li>
                         <li>NodeJS</li>
                         <li>ExpressJS</li>
                         <li>Websockets</li>
-                        <li>Typescript</li>
                     </ul>
                 </div>
                 <div className="technologies-card">
                 <div className="technologies-icon"> <FontAwesomeIcon icon={faRuler} className="accent-text"/> </div>
                     <h4>STYLING</h4>
                     <ul>
-                        <li>SCSS</li>
+                        <li>CSS3</li>
+                        <li>Material-UI</li>
                         <li>TailwindCSS</li>
                     </ul>
                 </div>
@@ -40,10 +42,13 @@ function Technologies() {
                     <div className="technologies-icon"> <FontAwesomeIcon icon={faDatabase} className="accent-text"/> </div>
                     <h4>OTHER</h4>
                     <ul>
-                        <li>Python</li>
-                        <li>C/C++</li>
+                        <li>Git</li>
                         <li>SQL</li>
-                        <li>Java</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Firebase</li>
+                        <li>Unity</li>
+                        <li>Godot</li>
                     </ul>
                 </div>
             </div>

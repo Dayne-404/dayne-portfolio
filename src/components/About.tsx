@@ -1,8 +1,11 @@
 import Technologies from './Technologies';
 import SectionHeader from './SectionHeader';
-import stareImg from '../assets/stare.jpg';
-import pfpImg from '../assets/pfp.jpg';
-import blackjackImg from '../assets/blackjack.png';
+
+import graduationImg from '../assets/graduation.jpg';
+import dayneHannah from '../assets/lifeguard.jpg';
+import dogImg from '../assets/dog.jpg';
+import skiingImg from '../assets/skiing.jpg';
+
 import '../styles/about.css';
 import Arrow from '../assets/rightArrow.svg?react'
 import Reveal from 'react-awesome-reveal';
@@ -11,13 +14,14 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 function About() {
 	const images = [
-		stareImg,
-		pfpImg,
-		blackjackImg,
+		[dayneHannah,"Dayne with his lifeguard supervisor smiling"],
+		[graduationImg, "Dayne at his graduation ceremony with his friend"],
+		[dogImg, "Dayne at a family event with his cousin and dog"],
+		[skiingImg, "Dayne skiing with his friends at Mt St. Louis Moonstone"],
 	];
 	
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
-	const intervalRef = useRef<number | null>(null);
+	const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 	
 	const customAnimation = keyframes`
 		from {
@@ -68,7 +72,7 @@ function About() {
 					<div className="about-content">
 						<div className="about-img">
 							<img
-								src={images[currentIndex]}
+								src={images[currentIndex][0]}
 								alt="Dayne doing something he likes"
 							/>
 							<div className='image-actions'>

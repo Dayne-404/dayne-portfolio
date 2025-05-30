@@ -4,7 +4,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 // import Logo from '../assets/sineCurve.svg?react';
 
 import '../styles/hero.css';
-import profilePicture from '../assets/pfp.jpg';
+import profilePicture from '../assets/portrait.jpg';
 
 function Hero() {
 	return (
@@ -26,29 +26,18 @@ function Hero() {
 						</p>
 					</div>
 					<div className="hero-buttons">
-						<button className="text-color">
-							<FontAwesomeIcon
-								icon={faDownload}
-								className="text-color"
-							/>{' '}
-							Resume
-						</button>
-						<a href="https://github.com/Dayne-404" target="_blank">
-							<FontAwesomeIcon
-								icon={faGithub}
-								className="secondary-text-color"
-							/>
-						</a>
-						<a
-							href="https://ca.linkedin.com/in/dayne-dellaire-954916291"
-							target="_blank"
-						>
-							<FontAwesomeIcon
-								icon={faLinkedin}
-								className="secondary-text-color"
-							/>
-						</a>
-					</div>
+	<a href="/Dayne_Dellaire_Resume.pdf" download>
+		<button className="text-color">
+			<FontAwesomeIcon icon={faDownload} className="text-color" /> Resume
+		</button>
+	</a>
+	<a href="https://github.com/Dayne-404" target="_blank" rel="noopener noreferrer">
+		<FontAwesomeIcon icon={faGithub} className="secondary-text-color" />
+	</a>
+	<a href="https://ca.linkedin.com/in/dayne-dellaire-954916291" target="_blank" rel="noopener noreferrer">
+		<FontAwesomeIcon icon={faLinkedin} className="secondary-text-color" />
+	</a>
+</div>
 				</div>
 			</div>
 		</div>
