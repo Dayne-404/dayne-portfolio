@@ -2,7 +2,6 @@ import Technologies from './Technologies';
 import SectionHeader from './SectionHeader';
 
 import graduationImg from '../assets/graduation.jpg';
-import dayneHannah from '../assets/lifeguard.jpg';
 import dogImg from '../assets/dog.jpg';
 import skiingImg from '../assets/skiing.jpg';
 
@@ -14,7 +13,6 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 function About() {
 	const images = [
-		[dayneHannah,"Dayne with his lifeguard supervisor smiling"],
 		[graduationImg, "Dayne at his graduation ceremony with his friend"],
 		[dogImg, "Dayne at a family event with his cousin and dog"],
 		[skiingImg, "Dayne skiing with his friends at Mt St. Louis Moonstone"],
