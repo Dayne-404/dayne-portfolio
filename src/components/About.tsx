@@ -1,9 +1,11 @@
 import Technologies from './Technologies';
 import SectionHeader from './SectionHeader';
 
-import graduationImg from '../assets/graduation.jpg';
-import dogImg from '../assets/dog.jpg';
-import skiingImg from '../assets/skiing.jpg';
+import graduationImg from '../assets/dayneGraduation.jpg';
+import golfImg from '../assets/dayneGolf.png';
+import girlfriendImg from '../assets/dayneKendal.jpg';
+import lifeguardImg from '../assets/dayneLifeguard.jpg';
+import skiingImg from '../assets/dayneSkiing.jpg'; 
 
 import '../styles/about.css';
 import Arrow from '../assets/rightArrow.svg?react'
@@ -13,9 +15,11 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 function About() {
 	const images = [
+		[lifeguardImg, "Dayne working as a lifeguard"],
+		[girlfriendImg, "Dayne with his girlfriend"],
+		[golfImg, "Dayne playing golf at the simulator"],
+		[skiingImg, "Dayne posing with his skiis on the mountain"],
 		[graduationImg, "Dayne at his graduation ceremony with his friend"],
-		[dogImg, "Dayne at a family event with his cousin and dog"],
-		[skiingImg, "Dayne skiing with his friends at Mt St. Louis Moonstone"],
 	];
 	
 	const [currentIndex, setCurrentIndex] = useState<number>(0);

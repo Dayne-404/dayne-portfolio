@@ -4,7 +4,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 // import Logo from '../assets/sineCurve.svg?react';
 
 import '../styles/hero.css';
-import profilePicture from '../assets/portrait.jpg';
+import profilePicture from '../assets/daynePortrait.jpg';
 
 function Hero() {
 	return (
